@@ -1,0 +1,725 @@
+---
+title: 'Ao Bot Commands'
+description: 'Complete guide to all user-accessible commands in Ao Bot'
+---
+
+# Ao Bot Commands
+
+Welcome to the complete command reference for Ao Bot! This guide covers all user-accessible commands, their usage, and examples.
+
+## Command Categories
+
+<details>
+<summary>📊 **Profile & Progress Commands**</summary>
+
+### `/profile`
+**Description:** View your or another user's profile, including level, XP, rank, and achievements.
+
+**Usage:**
+```bash
+/profile [user] [edit]
+```
+
+**Options:**
+- `user` (optional): The user to check profile for
+- `edit` (optional): Set to "yes" to edit your bio
+
+**Examples:**
+```bash
+/profile                    # View your own profile
+/profile @username         # View another user's profile
+/profile edit:yes          # Edit your profile bio
+```
+
+**What it shows:**
+- Current level and XP progress
+- Daily streak information
+- Badges and achievements
+- Game statistics (Tic-tac-toe, Connect 4, Minesweeper)
+- Rank and position on the server
+- Custom bio (if set)
+
+---
+
+### `/leaderboard`
+**Description:** View the server leaderboard sorted by different metrics.
+
+**Usage:**
+```bash
+/leaderboard [metrics]
+```
+
+**Options:**
+- `metrics` (optional): Sort by "level", "xp", "ai", "tictactoe", "connect4", or "minesweeper"
+
+**Examples:**
+```bash
+/leaderboard              # Show XP leaderboard
+/leaderboard level        # Show level leaderboard
+/leaderboard tictactoe    # Show Tic-tac-toe wins leaderboard
+```
+
+---
+
+### `/balance`
+**Description:** Check your or someone else's AoCoins and Aons balance.
+
+**Usage:**
+```bash
+/balance [user]
+```
+
+**Options:**
+- `user` (optional): User to check balance for
+
+**Examples:**
+```bash
+/balance                  # Check your own balance
+/balance @username        # Check another user's balance
+```
+
+</details>
+
+<details>
+<summary>🎮 **Game Commands**</summary>
+
+### `/game`
+**Description:** Create game lobbies to play with other players.
+
+**Usage:**
+```bash
+/game [game_type]
+```
+
+**Game Types:**
+- `tictactoe`: Create a Tic-tac-toe game lobby
+- `minesweeper`: Create a Minesweeper game lobby
+- `connect4`: Create a Connect 4 game lobby
+
+**Examples:**
+```bash
+/game tictactoe          # Start a Tic-tac-toe game
+/game connect4           # Start a Connect 4 game
+/game minesweeper        # Start a Minesweeper game
+```
+
+**How it works:**
+1. Use the command to create a game lobby
+2. Other players can join using the generated buttons
+3. Games are automatically scored and contribute to your statistics
+
+---
+
+### `/gamble`
+**Description:** Gamble your XP for a chance to win or lose it!
+
+**Usage:**
+```bash
+/gamble
+```
+
+**Risk Level:** High - You can lose all gambled XP
+**Reward:** 2x XP if you win
+
+---
+
+### `/highlow`
+**Description:** Guess if the next number is higher or lower for a chance to win vouchers.
+
+**Usage:**
+```bash
+/highlow
+```
+
+**How it works:**
+- A random number is generated
+- You guess if the next number will be higher or lower
+- Correct guesses reward you with vouchers
+- Vouchers can be converted to XP using `/convert`
+
+</details>
+
+<details>
+<summary>💰 **Economy Commands**</summary>
+
+### `/daily`
+**Description:** Claim your daily XP boost (10% boost for 20 minutes).
+
+**Usage:**
+```bash
+/daily
+```
+
+**Benefits:**
+- 10% XP boost for 20 minutes
+- Usable once per day
+- Resets at midnight UTC
+
+**Pro tip:** Use this before engaging in activities that give XP for maximum benefit!
+
+---
+
+### `/convert`
+**Description:** Convert your vouchers into XP at the current exchange rate.
+
+**Usage:**
+```bash
+/convert
+```
+
+**How it works:**
+- Vouchers are earned from various activities
+- Exchange rate fluctuates based on market conditions
+- Use `/balance` to check your voucher count
+
+---
+
+### `/market`
+**Description:** Invest in the market and earn returns after 24 hours.
+
+**Usage:**
+```bash
+/market [subcommand] [options]
+```
+
+**Subcommands:**
+- `invest <amount>`: Invest AoCoins in the market
+- `investments`: View your current investments
+- `portfolio [user]`: View detailed investment portfolio
+- `claim`: Claim matured investments
+- `rate`: View market rate chart over the last 24 hours
+
+**Examples:**
+```bash
+/market invest 1000       # Invest 1000 AoCoins
+/market investments        # View your investments
+/market portfolio         # View your portfolio
+/market claim             # Claim matured investments
+```
+
+---
+
+### `/beg`
+**Description:** Beg for AoCoins from other users.
+
+**Usage:**
+```bash
+/beg
+```
+
+**How it works:**
+- Random chance to receive AoCoins
+- Cooldown period between uses
+- Amount varies based on luck and server activity
+
+---
+
+### `/steal`
+**Description:** Attempt to steal AoCoins from other users.
+
+**Usage:**
+```bash
+/steal [user]
+```
+
+**Options:**
+- `user` (required): The user to attempt stealing from
+
+**Risk:** You can lose AoCoins if caught
+**Reward:** Steal a portion of the target's AoCoins if successful
+
+---
+
+### `/trade`
+**Description:** Trade items and AoCoins with other users.
+
+**Usage:**
+```bash
+/trade [user] [item] [amount]
+```
+
+**Options:**
+- `user` (required): The user to trade with
+- `item` (required): The item to trade
+- `amount` (optional): Quantity to trade
+
+**Examples:**
+```bash
+/trade @username aocoins 100    # Trade 100 AoCoins
+/trade @username item_name      # Trade an item
+```
+
+</details>
+
+<details>
+<summary>🏆 **Battle Pass & Quests**</summary>
+
+### `/battlepass`
+**Description:** View your Battle Pass progress and claim rewards.
+
+**Usage:**
+```bash
+/battlepass
+```
+
+**What it shows:**
+- Current level and progress
+- Available rewards
+- Premium vs. Free route differences
+- Season information and end time
+
+**Features:**
+- Free route with basic rewards
+- Premium route (10,000 AoCoins) with exclusive rewards
+- Seasonal content and special items
+- Progress tracking for all activities
+
+---
+
+### `/quests`
+**Description:** View and track your active quests.
+
+**Usage:**
+```bash
+/quests
+```
+
+**Quest Types:**
+- **Daily Quests:** Reset every day
+- **Weekly Quests:** Reset every week
+- **Seasonal Quests:** Last the entire season
+
+**Quest Categories:**
+- Command usage
+- Game wins
+- Social interactions
+- Economy activities
+
+**Rewards:**
+- XP points
+- AoCoins
+- Special items
+- Battle Pass progress
+
+---
+
+### `/achievements`
+**Description:** View your unlocked achievements and progress.
+
+**Usage:**
+```bash
+/achievements
+```
+
+**What it shows:**
+- All available achievements
+- Your progress on each achievement
+- Rewards for completing achievements
+- Hidden achievements (revealed when discovered)
+
+</details>
+
+<details>
+<summary>👥 **Social Commands**</summary>
+
+### `/friends`
+**Description:** Manage your friend list and send gifts.
+
+**Usage:**
+```bash
+/friends [subcommand] [options]
+```
+
+**Subcommands:**
+- `add <user>`: Send a friend request
+- `list`: See your current friends
+- `remove <friend>`: Remove a friend
+- `gift coins <user> <amount>`: Gift AoCoins to a friend
+- `gift battlepass`: Gift Premium Battle Pass (10,000 AoCoins)
+
+**Examples:**
+```bash
+/friends add @username           # Send friend request
+/friends list                    # View friends list
+/friends remove username         # Remove a friend
+/friends gift coins @user 500   # Gift 500 AoCoins
+```
+
+---
+
+### `/poke`
+**Description:** Send a poke to someone via DM.
+
+**Usage:**
+```bash
+/poke [user]
+```
+
+**Options:**
+- `user` (required): The user to poke
+
+**What happens:**
+- Sends a friendly notification to the target user
+- Great for getting someone's attention
+- Works even if they're offline
+
+---
+
+### `/block`
+**Description:** Block or unblock users.
+
+**Usage:**
+```bash
+/block [subcommand] [user]
+```
+
+**Subcommands:**
+- `add <user>`: Block a user
+- `remove <user>`: Unblock a user
+- `list`: View your blocked users
+
+**Examples:**
+```bash
+/block add @username      # Block a user
+/block remove @username   # Unblock a user
+/block list              # View blocked users
+```
+
+**Effects of blocking:**
+- Cannot view each other's profiles
+- Cannot interact in games
+- Cannot send friend requests
+- Cannot trade or gift items
+
+</details>
+
+<details>
+<summary>🛠️ **Utility Commands**</summary>
+
+### `/inventory`
+**Description:** View your or another user's inventory.
+
+**Usage:**
+```bash
+/inventory [user]
+```
+
+**Options:**
+- `user` (optional): User whose inventory to view
+
+**What it shows:**
+- All owned items
+- Item quantities
+- Item descriptions
+- Special item effects
+
+---
+
+### `/inspect`
+**Description:** Get detailed information about an item.
+
+**Usage:**
+```bash
+/inspect [item]
+```
+
+**Options:**
+- `item` (required): The item to inspect
+
+**Information shown:**
+- Item description
+- Effects and bonuses
+- Rarity and value
+- Usage instructions
+
+---
+
+### `/use`
+**Description:** Use an item from your inventory.
+
+**Usage:**
+```bash
+/use [item] [target]
+```
+
+**Options:**
+- `item` (required): The item to use
+- `target` (optional): Target user if required by the item
+
+**Examples:**
+```bash
+/use potion              # Use a potion on yourself
+/use gift @username      # Use a gift item on someone
+```
+
+---
+
+### `/catalog`
+**Description:** View the item catalog or purchase items.
+
+**Usage:**
+```bash
+/catalog [subcommand] [options]
+```
+
+**Subcommands:**
+- `view`: View the item catalog
+- `purchase <item> [quantity]`: Purchase an item
+
+**Examples:**
+```bash
+/catalog view                    # Browse available items
+/catalog purchase potion 5      # Buy 5 potions
+```
+
+---
+
+### `/craft`
+**Description:** Craft items using materials from your inventory.
+
+**Usage:**
+```bash
+/craft [item]
+```
+
+**Options:**
+- `item` (required): The item to craft
+
+**Requirements:**
+- Must have all required materials
+- Some items require specific levels
+- Crafting consumes materials
+
+---
+
+### `/lottery`
+**Description:** Participate in the server lottery.
+
+**Usage:**
+```bash
+/lottery
+```
+
+**How it works:**
+- Buy lottery tickets with AoCoins
+- Drawings happen at scheduled times
+- Winners receive the jackpot
+- Multiple prize tiers available
+
+</details>
+
+<details>
+<summary>🎨 **Fun & Entertainment**</summary>
+
+### `/imagine`
+**Description:** Generate AI images using text prompts.
+
+**Usage:**
+```bash
+/imagine [prompt]
+```
+
+**Options:**
+- `prompt` (required): Text description of the image you want
+
+**Examples:**
+```bash
+/imagine a cute cat playing with yarn
+/imagine a futuristic city skyline at sunset
+/imagine a magical forest with glowing mushrooms
+```
+
+**Features:**
+- AI-powered image generation
+- High-quality results
+- Creative freedom with prompts
+- Share generated images with the server
+
+---
+
+### `/cat`
+**Description:** Get a random cat image.
+
+**Usage:**
+```bash
+/cat
+```
+
+**What you get:**
+- Random cute cat photo
+- Perfect for cheering up
+- No cooldown
+
+---
+
+### `/miku`
+**Description:** Get a random cute Miku image from Danbooru.
+
+**Usage:**
+```bash
+/miku
+```
+
+**Content:**
+- Random Hatsune Miku images
+- Cute and wholesome content
+- From Danbooru image board
+
+---
+
+### `/hoshino`
+**Description:** Get random Hoshino Ruby images from Danbooru.
+
+**Usage:**
+```bash
+/hoshino ruby
+```
+
+**Content:**
+- Random Hoshino Ruby images
+- Anime character content
+- From Danbooru image board
+
+---
+
+### `/drunk`
+**Description:** Forget short term memory (fun effect).
+
+**Usage:**
+```bash
+/drunk
+```
+
+**Effect:**
+- Temporary memory loss simulation
+- Fun roleplay element
+- No lasting effects
+
+---
+
+### `/secret`
+**Description:** ??? (Mystery command).
+
+**Usage:**
+```bash
+/secret
+```
+
+**What it does:** That's a secret! Try it and find out.
+
+</details>
+
+<details>
+<summary>⚙️ **Advanced Commands**</summary>
+
+### `/triggers`
+**Description:** Manage trigger keywords and responses (Admin/Mod only).
+
+**Usage:**
+```bash
+/triggers [subcommand] [options]
+```
+
+**Subcommands:**
+- `list`: List all current triggers
+- `add <keyword> <response> [case_sensitive]`: Add a new trigger
+- `remove <keyword>`: Remove a trigger by keyword
+
+**Examples:**
+```bash
+/triggers list                           # View all triggers
+/triggers add hello Hi there!           # Add trigger for "hello"
+/triggers remove hello                   # Remove "hello" trigger
+```
+
+---
+
+### `/report`
+**Description:** Report issues or bugs to the development team.
+
+**Usage:**
+```bash
+/report [issue]
+```
+
+**Options:**
+- `issue` (required): Description of the problem
+
+**What happens:**
+- Issue is logged for review
+- Development team is notified
+- You may receive updates on the fix
+
+---
+
+### `/alert`
+**Description:** Send or view alerts (Admin only).
+
+**Usage:**
+```bash
+/alert [subcommand] [options]
+```
+
+**Subcommands:**
+- `send <message>`: Send a global alert to all users
+- `view`: View your pending alerts
+
+**Examples:**
+```bash
+/alert send Server maintenance in 10 minutes
+/alert view                              # View pending alerts
+```
+
+---
+
+### `/pets`
+**Description:** Manage virtual pets (if enabled).
+
+**Usage:**
+```bash
+/pets [subcommand]
+```
+
+**Features:**
+- Adopt virtual pets
+- Feed and care for them
+- Train and level them up
+- Pet battles and competitions
+
+</details>
+
+## Command Restrictions
+
+### DM Limitations
+Most commands only work within the Ao Server. Commands that work in DMs include:
+- Friend request acceptance/decline buttons
+- Bomb defuse buttons
+- Trivia answer buttons
+
+### Permission Requirements
+Some commands require specific roles or permissions:
+- **Admin Commands:** `/restart`, `/alert`, `/triggers`
+- **Moderator Commands:** `/block`, `/report`
+- **Developer Commands:** `/developer` (requires developer role)
+
+## Getting Help
+
+If you need help with any command:
+1. Use `/help` in the server
+2. Check this documentation
+3. Ask in the #help channel
+4. Report bugs with `/report`
+
+## Tips for New Users
+
+1. **Start with `/profile`** to see your current progress
+2. **Use `/daily` every day** for the XP boost
+3. **Complete quests** to earn rewards and progress
+4. **Make friends** to unlock gifting features
+5. **Participate in games** to improve your statistics
+6. **Check the catalog** for useful items to purchase
+
+---
+
+*Last updated: December 2024*
+*For technical support, contact the development team or use `/report`*

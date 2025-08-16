@@ -1,0 +1,1536 @@
+---
+title: 'Ao Bot Commands'
+description: 'Complete guide to all user-accessible commands in Ao Bot'
+---
+
+# Ao Bot Commands
+
+Welcome to the complete command reference for Ao Bot! This guide covers all user-accessible commands, their usage, and examples.
+
+## Command Categories
+
+<details>
+<summary>📊 **Profile & Progress Commands**</summary>
+
+<div class="command-section">
+
+### `/profile`
+<div class="command-description">
+View your or another user's profile, including level, XP, rank, and achievements.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/profile [user] [edit]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">user</span>
+  <span class="option-description">The user to check profile for</span>
+  <span class="option-optional">Optional</span>
+</div>
+<div class="option-item">
+  <span class="option-name">edit</span>
+  <span class="option-description">Set to "yes" to edit your bio</span>
+  <span class="option-optional">Optional</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/profile</code> - View your own profile
+</div>
+<div class="example-item">
+  <code>/profile @username</code> - View another user's profile
+</div>
+<div class="example-item">
+  <code>/profile edit:yes</code> - Edit your profile bio
+</div>
+</div>
+
+<div class="features-list">
+<h4>What it shows</h4>
+<div class="feature-item">
+  <span class="feature-icon">📈</span>
+  <span>Current level and XP progress</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🔥</span>
+  <span>Daily streak information</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🏆</span>
+  <span>Badges and achievements</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎮</span>
+  <span>Game statistics (Tic-tac-toe, Connect 4, Minesweeper)</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">⭐</span>
+  <span>Rank and position on the server</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📝</span>
+  <span>Custom bio (if set)</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/leaderboard`
+<div class="command-description">
+View the server leaderboard sorted by different metrics.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/leaderboard [metrics]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">metrics</span>
+  <span class="option-description">Sort by "level", "xp", "ai", "tictactoe", "connect4", or "minesweeper"</span>
+  <span class="option-optional">Optional</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/leaderboard</code> - Show XP leaderboard
+</div>
+<div class="example-item">
+  <code>/leaderboard level</code> - Show level leaderboard
+</div>
+<div class="example-item">
+  <code>/leaderboard tictactoe</code> - Show Tic-tac-toe wins leaderboard
+</div>
+</div>
+
+</div>
+
+---
+
+### `/balance`
+<div class="command-description">
+Check your or someone else's AoCoins and Aons balance.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/balance [user]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">user</span>
+  <span class="option-description">User to check balance for</span>
+  <span class="option-optional">Optional</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/balance</code> - Check your own balance
+</div>
+<div class="example-item">
+  <code>/balance @username</code> - Check another user's balance
+</div>
+</div>
+
+</div>
+
+</details>
+
+<details>
+<summary>🎮 **Game Commands**</summary>
+
+<div class="command-section">
+
+### `/game`
+<div class="command-description">
+Create game lobbies to play with other players.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/game [game_type]
+```
+</div>
+
+<div class="options-list">
+<h4>Game Types</h4>
+<div class="option-item">
+  <span class="option-name">tictactoe</span>
+  <span class="option-description">Create a Tic-tac-toe game lobby</span>
+</div>
+<div class="option-item">
+  <span class="option-name">minesweeper</span>
+  <span class="option-description">Create a Minesweeper game lobby</span>
+</div>
+<div class="option-item">
+  <span class="option-name">connect4</span>
+  <span class="option-description">Create a Connect 4 game lobby</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/game tictactoe</code> - Start a Tic-tac-toe game
+</div>
+<div class="example-item">
+  <code>/game connect4</code> - Start a Connect 4 game
+</div>
+<div class="example-item">
+  <code>/game minesweeper</code> - Start a Minesweeper game
+</div>
+</div>
+
+<div class="features-list">
+<h4>How it works</h4>
+<div class="feature-item">
+  <span class="feature-icon">1️⃣</span>
+  <span>Use the command to create a game lobby</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">2️⃣</span>
+  <span>Other players can join using the generated buttons</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">3️⃣</span>
+  <span>Games are automatically scored and contribute to your statistics</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/gamble`
+<div class="command-description">
+Gamble your XP for a chance to win or lose it!
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/gamble
+```
+</div>
+
+<div class="warning-box">
+<h4>⚠️ Risk Warning</h4>
+<p><strong>Risk Level:</strong> High - You can lose all gambled XP</p>
+<p><strong>Reward:</strong> 2x XP if you win</p>
+</div>
+
+</div>
+
+---
+
+### `/highlow`
+<div class="command-description">
+Guess if the next number is higher or lower for a chance to win vouchers.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/highlow
+```
+</div>
+
+<div class="features-list">
+<h4>How it works</h4>
+<div class="feature-item">
+  <span class="feature-icon">🎲</span>
+  <span>A random number is generated</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🤔</span>
+  <span>You guess if the next number will be higher or lower</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎁</span>
+  <span>Correct guesses reward you with vouchers</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💱</span>
+  <span>Vouchers can be converted to XP using <code>/convert</code></span>
+</div>
+</div>
+
+</div>
+
+</details>
+
+<details>
+<summary>💰 **Economy Commands**</summary>
+
+<div class="command-section">
+
+### `/daily`
+<div class="command-description">
+Claim your daily XP boost (10% boost for 20 minutes).
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/daily
+```
+</div>
+
+<div class="features-list">
+<h4>Benefits</h4>
+<div class="feature-item">
+  <span class="feature-icon">⚡</span>
+  <span>10% XP boost for 20 minutes</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📅</span>
+  <span>Usable once per day</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🕛</span>
+  <span>Resets at midnight UTC</span>
+</div>
+</div>
+
+<div class="tip-box">
+<h4>💡 Pro Tip</h4>
+<p>Use this before engaging in activities that give XP for maximum benefit!</p>
+</div>
+
+</div>
+
+---
+
+### `/convert`
+<div class="command-description">
+Convert your vouchers into XP at the current exchange rate.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/convert
+```
+</div>
+
+<div class="features-list">
+<h4>How it works</h4>
+<div class="feature-item">
+  <span class="feature-icon">🎫</span>
+  <span>Vouchers are earned from various activities</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📊</span>
+  <span>Exchange rate fluctuates based on market conditions</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💰</span>
+  <span>Use <code>/balance</code> to check your voucher count</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/market`
+<div class="command-description">
+Invest in the market and earn returns after 24 hours.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/market [subcommand] [options]
+```
+</div>
+
+<div class="options-list">
+<h4>Subcommands</h4>
+<div class="option-item">
+  <span class="option-name">invest &lt;amount&gt;</span>
+  <span class="option-description">Invest AoCoins in the market</span>
+</div>
+<div class="option-item">
+  <span class="option-name">investments</span>
+  <span class="option-description">View your current investments</span>
+</div>
+<div class="option-item">
+  <span class="option-name">portfolio [user]</span>
+  <span class="option-description">View detailed investment portfolio</span>
+</div>
+<div class="option-item">
+  <span class="option-name">claim</span>
+  <span class="option-description">Claim matured investments</span>
+</div>
+<div class="option-item">
+  <span class="option-name">rate</span>
+  <span class="option-description">View market rate chart over the last 24 hours</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/market invest 1000</code> - Invest 1000 AoCoins
+</div>
+<div class="example-item">
+  <code>/market investments</code> - View your investments
+</div>
+<div class="example-item">
+  <code>/market portfolio</code> - View your portfolio
+</div>
+<div class="example-item">
+  <code>/market claim</code> - Claim matured investments
+</div>
+</div>
+
+</div>
+
+---
+
+### `/beg`
+<div class="command-description">
+Beg for AoCoins from other users.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/beg
+```
+</div>
+
+<div class="features-list">
+<h4>How it works</h4>
+<div class="feature-item">
+  <span class="feature-icon">🎲</span>
+  <span>Random chance to receive AoCoins</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">⏰</span>
+  <span>Cooldown period between uses</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💰</span>
+  <span>Amount varies based on luck and server activity</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/steal`
+<div class="command-description">
+Attempt to steal AoCoins from other users.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/steal [user]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">user</span>
+  <span class="option-description">The user to attempt stealing from</span>
+  <span class="option-required">Required</span>
+</div>
+</div>
+
+<div class="warning-box">
+<h4>⚠️ Risk & Reward</h4>
+<p><strong>Risk:</strong> You can lose AoCoins if caught</p>
+<p><strong>Reward:</strong> Steal a portion of the target's AoCoins if successful</p>
+</div>
+
+</div>
+
+---
+
+### `/trade`
+<div class="command-description">
+Trade items and AoCoins with other users.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/trade [user] [item] [amount]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">user</span>
+  <span class="option-description">The user to trade with</span>
+  <span class="option-required">Required</span>
+</div>
+<div class="option-item">
+  <span class="option-name">item</span>
+  <span class="option-description">The item to trade</span>
+  <span class="option-required">Required</span>
+</div>
+<div class="option-item">
+  <span class="option-name">amount</span>
+  <span class="option-description">Quantity to trade</span>
+  <span class="option-optional">Optional</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/trade @username aocoins 100</code> - Trade 100 AoCoins
+</div>
+<div class="example-item">
+  <code>/trade @username item_name</code> - Trade an item
+</div>
+</div>
+
+</div>
+
+</details>
+
+<details>
+<summary>🏆 **Battle Pass & Quests**</summary>
+
+<div class="command-section">
+
+### `/battlepass`
+<div class="command-description">
+View your Battle Pass progress and claim rewards.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/battlepass
+```
+</div>
+
+<div class="features-list">
+<h4>What it shows</h4>
+<div class="feature-item">
+  <span class="feature-icon">📊</span>
+  <span>Current level and progress</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎁</span>
+  <span>Available rewards</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">⭐</span>
+  <span>Premium vs. Free route differences</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📅</span>
+  <span>Season information and end time</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>Features</h4>
+<div class="feature-item">
+  <span class="feature-icon">🆓</span>
+  <span>Free route with basic rewards</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💎</span>
+  <span>Premium route (10,000 AoCoins) with exclusive rewards</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🌱</span>
+  <span>Seasonal content and special items</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📈</span>
+  <span>Progress tracking for all activities</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/quests`
+<div class="command-description">
+View and track your active quests.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/quests
+```
+</div>
+
+<div class="features-list">
+<h4>Quest Types</h4>
+<div class="feature-item">
+  <span class="feature-icon">📅</span>
+  <span><strong>Daily Quests:</strong> Reset every day</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📆</span>
+  <span><strong>Weekly Quests:</strong> Reset every week</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🌱</span>
+  <span><strong>Seasonal Quests:</strong> Last the entire season</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>Quest Categories</h4>
+<div class="feature-item">
+  <span class="feature-icon">⌨️</span>
+  <span>Command usage</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎮</span>
+  <span>Game wins</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">👥</span>
+  <span>Social interactions</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💰</span>
+  <span>Economy activities</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>Rewards</h4>
+<div class="feature-item">
+  <span class="feature-icon">📈</span>
+  <span>XP points</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🪙</span>
+  <span>AoCoins</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎁</span>
+  <span>Special items</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🏆</span>
+  <span>Battle Pass progress</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/achievements`
+<div class="command-description">
+View your unlocked achievements and progress.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/achievements
+```
+</div>
+
+<div class="features-list">
+<h4>What it shows</h4>
+<div class="feature-item">
+  <span class="feature-icon">🏆</span>
+  <span>All available achievements</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📊</span>
+  <span>Your progress on each achievement</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎁</span>
+  <span>Rewards for completing achievements</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🔍</span>
+  <span>Hidden achievements (revealed when discovered)</span>
+</div>
+</div>
+
+</div>
+
+</details>
+
+<details>
+<summary>👥 **Social Commands**</summary>
+
+<div class="command-section">
+
+### `/friends`
+<div class="command-description">
+Manage your friend list and send gifts.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/friends [subcommand] [options]
+```
+</div>
+
+<div class="options-list">
+<h4>Subcommands</h4>
+<div class="option-item">
+  <span class="option-name">add &lt;user&gt;</span>
+  <span class="option-description">Send a friend request</span>
+</div>
+<div class="option-item">
+  <span class="option-name">list</span>
+  <span class="option-description">See your current friends</span>
+</div>
+<div class="option-item">
+  <span class="option-name">remove &lt;friend&gt;</span>
+  <span class="option-description">Remove a friend</span>
+</div>
+<div class="option-item">
+  <span class="option-name">gift coins &lt;user&gt; &lt;amount&gt;</span>
+  <span class="option-description">Gift AoCoins to a friend</span>
+</div>
+<div class="option-item">
+  <span class="option-name">gift battlepass</span>
+  <span class="option-description">Gift Premium Battle Pass (10,000 AoCoins)</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/friends add @username</code> - Send friend request
+</div>
+<div class="example-item">
+  <code>/friends list</code> - View friends list
+</div>
+<div class="example-item">
+  <code>/friends remove username</code> - Remove a friend
+</div>
+<div class="example-item">
+  <code>/friends gift coins @user 500</code> - Gift 500 AoCoins
+</div>
+</div>
+
+</div>
+
+---
+
+### `/poke`
+<div class="command-description">
+Send a poke to someone via DM.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/poke [user]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">user</span>
+  <span class="option-description">The user to poke</span>
+  <span class="option-required">Required</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>What happens</h4>
+<div class="feature-item">
+  <span class="feature-icon">📱</span>
+  <span>Sends a friendly notification to the target user</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">👋</span>
+  <span>Great for getting someone's attention</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💬</span>
+  <span>Works even if they're offline</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/block`
+<div class="command-description">
+Block or unblock users.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/block [subcommand] [user]
+```
+</div>
+
+<div class="options-list">
+<h4>Subcommands</h4>
+<div class="option-item">
+  <span class="option-name">add &lt;user&gt;</span>
+  <span class="option-description">Block a user</span>
+</div>
+<div class="option-item">
+  <span class="option-name">remove &lt;user&gt;</span>
+  <span class="option-description">Unblock a user</span>
+</div>
+<div class="option-item">
+  <span class="option-name">list</span>
+  <span class="option-description">View your blocked users</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/block add @username</code> - Block a user
+</div>
+<div class="example-item">
+  <code>/block remove @username</code> - Unblock a user
+</div>
+<div class="example-item">
+  <code>/block list</code> - View blocked users
+</div>
+</div>
+
+<div class="warning-box">
+<h4>🚫 Effects of blocking</h4>
+<div class="feature-item">
+  <span class="feature-icon">❌</span>
+  <span>Cannot view each other's profiles</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">❌</span>
+  <span>Cannot interact in games</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">❌</span>
+  <span>Cannot send friend requests</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">❌</span>
+  <span>Cannot trade or gift items</span>
+</div>
+</div>
+
+</div>
+
+</details>
+
+<details>
+<summary>🛠️ **Utility Commands**</summary>
+
+<div class="command-section">
+
+### `/inventory`
+<div class="command-description">
+View your or another user's inventory.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/inventory [user]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">user</span>
+  <span class="option-description">User whose inventory to view</span>
+  <span class="option-optional">Optional</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>What it shows</h4>
+<div class="feature-item">
+  <span class="feature-icon">📦</span>
+  <span>All owned items</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🔢</span>
+  <span>Item quantities</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📝</span>
+  <span>Item descriptions</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">✨</span>
+  <span>Special item effects</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/inspect`
+<div class="command-description">
+Get detailed information about an item.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/inspect [item]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">item</span>
+  <span class="option-description">The item to inspect</span>
+  <span class="option-required">Required</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>Information shown</h4>
+<div class="feature-item">
+  <span class="feature-icon">📝</span>
+  <span>Item description</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">⚡</span>
+  <span>Effects and bonuses</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💎</span>
+  <span>Rarity and value</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📖</span>
+  <span>Usage instructions</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/use`
+<div class="command-description">
+Use an item from your inventory.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/use [item] [target]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">item</span>
+  <span class="option-description">The item to use</span>
+  <span class="option-required">Required</span>
+</div>
+<div class="option-item">
+  <span class="option-name">target</span>
+  <span class="option-description">Target user if required by the item</span>
+  <span class="option-optional">Optional</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/use potion</code> - Use a potion on yourself
+</div>
+<div class="example-item">
+  <code>/use gift @username</code> - Use a gift item on someone
+</div>
+</div>
+
+</div>
+
+---
+
+### `/catalog`
+<div class="command-description">
+View the item catalog or purchase items.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/catalog [subcommand] [options]
+```
+</div>
+
+<div class="options-list">
+<h4>Subcommands</h4>
+<div class="option-item">
+  <span class="option-name">view</span>
+  <span class="option-description">View the item catalog</span>
+</div>
+<div class="option-item">
+  <span class="option-name">purchase &lt;item&gt; [quantity]</span>
+  <span class="option-description">Purchase an item</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/catalog view</code> - Browse available items
+</div>
+<div class="example-item">
+  <code>/catalog purchase potion 5</code> - Buy 5 potions
+</div>
+</div>
+
+</div>
+
+---
+
+### `/craft`
+<div class="command-description">
+Craft items using materials from your inventory.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/craft [item]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">item</span>
+  <span class="option-description">The item to craft</span>
+  <span class="option-required">Required</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>Requirements</h4>
+<div class="feature-item">
+  <span class="feature-icon">📦</span>
+  <span>Must have all required materials</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📊</span>
+  <span>Some items require specific levels</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💸</span>
+  <span>Crafting consumes materials</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/lottery`
+<div class="command-description">
+Participate in the server lottery.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/lottery
+```
+</div>
+
+<div class="features-list">
+<h4>How it works</h4>
+<div class="feature-item">
+  <span class="feature-icon">🎫</span>
+  <span>Buy lottery tickets with AoCoins</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">⏰</span>
+  <span>Drawings happen at scheduled times</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🏆</span>
+  <span>Winners receive the jackpot</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎁</span>
+  <span>Multiple prize tiers available</span>
+</div>
+</div>
+
+</div>
+
+</details>
+
+<details>
+<summary>🎨 **Fun & Entertainment**</summary>
+
+<div class="command-section">
+
+### `/imagine`
+<div class="command-description">
+Generate AI images using text prompts.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/imagine [prompt]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">prompt</span>
+  <span class="option-description">Text description of the image you want</span>
+  <span class="option-required">Required</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/imagine a cute cat playing with yarn</code>
+</div>
+<div class="example-item">
+  <code>/imagine a futuristic city skyline at sunset</code>
+</div>
+<div class="example-item">
+  <code>/imagine a magical forest with glowing mushrooms</code>
+</div>
+</div>
+
+<div class="features-list">
+<h4>Features</h4>
+<div class="feature-item">
+  <span class="feature-icon">🤖</span>
+  <span>AI-powered image generation</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎨</span>
+  <span>High-quality results</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💭</span>
+  <span>Creative freedom with prompts</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📤</span>
+  <span>Share generated images with the server</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/cat`
+<div class="command-description">
+Get a random cat image.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/cat
+```
+</div>
+
+<div class="features-list">
+<h4>What you get</h4>
+<div class="feature-item">
+  <span class="feature-icon">🐱</span>
+  <span>Random cute cat photo</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">😊</span>
+  <span>Perfect for cheering up</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">⚡</span>
+  <span>No cooldown</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/miku`
+<div class="command-description">
+Get a random cute Miku image from Danbooru.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/miku
+```
+</div>
+
+<div class="features-list">
+<h4>Content</h4>
+<div class="feature-item">
+  <span class="feature-icon">🎵</span>
+  <span>Random Hatsune Miku images</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">💕</span>
+  <span>Cute and wholesome content</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🌐</span>
+  <span>From Danbooru image board</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/hoshino`
+<div class="command-description">
+Get random Hoshino Ruby images from Danbooru.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/hoshino ruby
+```
+</div>
+
+<div class="features-list">
+<h4>Content</h4>
+<div class="feature-item">
+  <span class="feature-icon">🌸</span>
+  <span>Random Hoshino Ruby images</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎭</span>
+  <span>Anime character content</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🌐</span>
+  <span>From Danbooru image board</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/drunk`
+<div class="command-description">
+Forget short term memory (fun effect).
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/drunk
+```
+</div>
+
+<div class="features-list">
+<h4>Effect</h4>
+<div class="feature-item">
+  <span class="feature-icon">🍺</span>
+  <span>Temporary memory loss simulation</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🎭</span>
+  <span>Fun roleplay element</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">✅</span>
+  <span>No lasting effects</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/secret`
+<div class="command-description">
+??? (Mystery command).
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/secret
+```
+</div>
+
+<div class="tip-box">
+<h4>🤫 What it does</h4>
+<p>That's a secret! Try it and find out.</p>
+</div>
+
+</div>
+
+</details>
+
+<details>
+<summary>⚙️ **Advanced Commands**</summary>
+
+<div class="command-section">
+
+### `/triggers`
+<div class="command-description">
+Manage trigger keywords and responses (Admin/Mod only).
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/triggers [subcommand] [options]
+```
+</div>
+
+<div class="options-list">
+<h4>Subcommands</h4>
+<div class="option-item">
+  <span class="option-name">list</span>
+  <span class="option-description">List all current triggers</span>
+</div>
+<div class="option-item">
+  <span class="option-name">add &lt;keyword&gt; &lt;response&gt; [case_sensitive]</span>
+  <span class="option-description">Add a new trigger</span>
+</div>
+<div class="option-item">
+  <span class="option-name">remove &lt;keyword&gt;</span>
+  <span class="option-description">Remove a trigger by keyword</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/triggers list</code> - View all triggers
+</div>
+<div class="example-item">
+  <code>/triggers add hello Hi there!</code> - Add trigger for "hello"
+</div>
+<div class="example-item">
+  <code>/triggers remove hello</code> - Remove "hello" trigger
+</div>
+</div>
+
+</div>
+
+---
+
+### `/report`
+<div class="command-description">
+Report issues or bugs to the development team.
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/report [issue]
+```
+</div>
+
+<div class="options-list">
+<h4>Options</h4>
+<div class="option-item">
+  <span class="option-name">issue</span>
+  <span class="option-description">Description of the problem</span>
+  <span class="option-required">Required</span>
+</div>
+</div>
+
+<div class="features-list">
+<h4>What happens</h4>
+<div class="feature-item">
+  <span class="feature-icon">📝</span>
+  <span>Issue is logged for review</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">👨‍💻</span>
+  <span>Development team is notified</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">📧</span>
+  <span>You may receive updates on the fix</span>
+</div>
+</div>
+
+</div>
+
+---
+
+### `/alert`
+<div class="command-description">
+Send or view alerts (Admin only).
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/alert [subcommand] [options]
+```
+</div>
+
+<div class="options-list">
+<h4>Subcommands</h4>
+<div class="option-item">
+  <span class="option-name">send &lt;message&gt;</span>
+  <span class="option-description">Send a global alert to all users</span>
+</div>
+<div class="option-item">
+  <span class="option-name">view</span>
+  <span class="option-description">View your pending alerts</span>
+</div>
+</div>
+
+<div class="command-examples">
+<h4>Examples</h4>
+<div class="example-item">
+  <code>/alert send Server maintenance in 10 minutes</code>
+</div>
+<div class="example-item">
+  <code>/alert view</code> - View pending alerts
+</div>
+</div>
+
+</div>
+
+---
+
+### `/pets`
+<div class="command-description">
+Manage virtual pets (if enabled).
+</div>
+
+<div class="usage-section">
+<h4>Usage</h4>
+```bash
+/pets [subcommand]
+```
+</div>
+
+<div class="features-list">
+<h4>Features</h4>
+<div class="feature-item">
+  <span class="feature-icon">🐾</span>
+  <span>Adopt virtual pets</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🍽️</span>
+  <span>Feed and care for them</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">🏋️</span>
+  <span>Train and level them up</span>
+</div>
+<div class="feature-item">
+  <span class="feature-icon">⚔️</span>
+  <span>Pet battles and competitions</span>
+</div>
+</div>
+
+</div>
+
+</details>
+
+## Command Restrictions
+
+<div class="restrictions-section">
+
+### DM Limitations
+Most commands only work within the Ao Server. Commands that work in DMs include:
+- Friend request acceptance/decline buttons
+- Bomb defuse buttons
+- Trivia answer buttons
+
+### Permission Requirements
+Some commands require specific roles or permissions:
+- **Admin Commands:** `/restart`, `/alert`, `/triggers`
+- **Moderator Commands:** `/block`, `/report`
+- **Developer Commands:** `/developer` (requires developer role)
+
+</div>
+
+## Getting Help
+
+<div class="help-section">
+
+If you need help with any command:
+<ol class="help-steps">
+  <li>Use <code>/help</code> in the server</li>
+  <li>Check this documentation</li>
+  <li>Ask in the #help channel</li>
+  <li>Report bugs with <code>/report</code></li>
+</ol>
+
+</div>
+
+## Tips for New Users
+
+<div class="tips-section">
+
+<ol class="tips-list">
+  <li><strong>Start with <code>/profile</code></strong> to see your current progress</li>
+  <li><strong>Use <code>/daily</code> every day</strong> for the XP boost</li>
+  <li><strong>Complete quests</strong> to earn rewards and progress</li>
+  <li><strong>Make friends</strong> to unlock gifting features</li>
+  <li><strong>Participate in games</strong> to improve your statistics</li>
+  <li><strong>Check the catalog</strong> for useful items to purchase</li>
+</ol>
+
+</div>
+
+---
+
+*Last updated: December 2024*  
+*For technical support, contact the development team or use <code>/report</code>*
